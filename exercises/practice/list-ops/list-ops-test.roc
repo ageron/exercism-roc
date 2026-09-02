@@ -1,6 +1,6 @@
 # These tests are auto-generated with test data from:
 # https://github.com/exercism/problem-specifications/tree/main/exercises/list-ops/canonical-data.json
-# File last updated on 2026-08-23
+# File last updated on 2026-08-29
 
 import ListOps exposing [concat, join, filter, len, map, fold, fold_rev, reverse]
 
@@ -168,12 +168,7 @@ expect {
 	result == [[4, 5, 6], [], [3], [1, 2]]
 }
 
-round : Dec, { step : Dec ?? 1.0 } -> Dec
+round : Dec, { step : Dec } -> Dec
 round = |value, { step }| {
 	((value / step).round_to_i128().to_dec_try() ?? crash "Unreachable") * step
-}
-
-# This program is only used to run tests with `roc test`, so main! does nothing.
-main! = |_args| {
-	Ok({})
 }
