@@ -1,6 +1,6 @@
 # These tests are auto-generated with test data from:
 # https://github.com/exercism/problem-specifications/tree/main/exercises/game-of-life/canonical-data.json
-# File last updated on 2026-08-31
+# File last updated on 2026-09-02
 
 import GameOfLife exposing [tick]
 
@@ -22,7 +22,6 @@ expect {
 expect {
 	result = tick([[Dead, Dead, Dead], [Dead, Alive, Dead], [Dead, Alive, Dead]])
 	expected = [[Dead, Dead, Dead], [Dead, Dead, Dead], [Dead, Dead, Dead]]
-	dbg result
 	result == expected
 }
 
