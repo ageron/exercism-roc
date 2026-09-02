@@ -31,17 +31,8 @@ Change :: {}.{
 			}
 		}
 
-		help(coins |> sort_desc, target, U64.highest)?
+		help(coins.sort_reversed(), target, U64.highest)?
+			.sort()
+			|> Ok
 	}
-		|> sort_asc
-		|> Ok
-}
-
-# The following functions should soon be available in Roc's builtins
-sort_asc = |list| {
-	list.sort_with(|a, b| a.compare(b))
-}
-
-sort_desc = |list| {
-	list.sort_with(|a, b| b.compare(a))
 }

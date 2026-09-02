@@ -1,6 +1,6 @@
 # These tests are auto-generated with test data from:
 # https://github.com/exercism/problem-specifications/tree/main/exercises/dominoes/canonical-data.json
-# File last updated on 2026-08-01
+# File last updated on 2026-08-29
 
 import Dominoes exposing [Domino, find_chain]
 
@@ -155,19 +155,19 @@ expect {
 }
 
 # # Compare two dominoes in lexicographical order, for example (3, 1) > (2, 5)
-compare_dominoes : (U8, U8), (U8, U8) -> [LT, GT, EQ]
+compare_dominoes : (U8, U8), (U8, U8) -> [Before, After, Same]
 compare_dominoes = |a, b| {
 	if a.0 < b.0 {
-		LT
+		Before
 	} else if a.0 > b.0 {
-		GT
+		After
 	} else
 		if a.1 < b.1 {
-			LT
+			Before
 		} else if a.1 > b.1 {
-			GT
+			After
 		} else {
-			EQ
+			Same
 		}
 }
 
@@ -206,9 +206,4 @@ is_valid_chain_for = |maybe_chain, dominoes| {
 		Ok(chain) => (canonicalize(chain) == canonicalize(dominoes)) and is_valid_chain(chain)
 		Err(_) => Bool.False
 	}
-}
-
-# This program is only used to run tests with `roc test`, so main! does nothing.
-main! = |_args| {
-	Ok({})
 }

@@ -47,12 +47,3 @@ invert = |char| {
 		char
 	}
 }
-
-# The following functions should soon be available in Roc's builtins
-sort_asc = |list| {
-	list.sort_with(|a, b| a.compare(b))
-}
-
-sort_desc = |list| {
-	list.sort_with(|a, b| b.compare(a))
-}
