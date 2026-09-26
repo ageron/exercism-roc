@@ -10,7 +10,7 @@
       "swift-scheduling-test.roc"
     ],
     "example": [
-      ".meta/Example.roc"
+      ".meta/SwiftScheduling.roc"
     ]
   },
   "blurb": "Convert delivery date descriptions to actual delivery dates.",
