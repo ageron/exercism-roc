@@ -1,3 +1,7 @@
+##
+## Example solution
+##
+
 IntergalacticTransmission :: {}.{
 	transmit_sequence : List(U8) -> List(U8)
 	transmit_sequence = |message| {
