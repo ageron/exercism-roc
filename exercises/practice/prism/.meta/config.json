@@ -8,7 +8,7 @@
       "prism-test.roc"
     ],
     "example": [
-      ".meta/Example.roc"
+      ".meta/Prism.roc"
     ]
   },
   "blurb": "Calculate the path of a laser through refractive prisms.",
